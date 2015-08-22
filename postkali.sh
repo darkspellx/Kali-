@@ -648,24 +648,7 @@ break
 
 done
 }
-######## Update metasploit
-function updatemetasploit {
-if [ ! -f /opt/dirs3arch.py ]; then
-	echo -e "\e[1;31mThis option will update latest metasploit version!\e[0m"
-	echo -e ""
-	echo -e "Do you want to update it ? (Y/N)"
-			read install
-			if [[ $install = Y || $install = y ]] ; then	
-				echo -e "\033[31m====== Updating metasploit ======\033[m"
-				sleep 2
-				git clone https://github.com/rapid7/metasploit-framework.git /opt/exploitation/metasploit/
-			else
-				echo -e "\e[32m[-] Ok,maybe later !\e[0m"
-			fi
-	else
-		echo -e "\e[32m[-] Metasploit already updated !\e[0m"
-	fi
-}
+
 ######## Update Social Engineering Toolkit
 function updateSET {
 	echo -e "\e[1;31mThis option will update latest SET version!\e[0m"
@@ -757,12 +740,8 @@ echo -e "
 \033[35m#######################################################\033[m
                 Update tools to latest version
 \033[35m#######################################################\033[m"
-select menusel in "Metasploit" "Beef" "Veil-Evasion" "Social Engineering Toolkit" "Backdoor Factory" "Unicorn" "Update All" "Back to Main"; do
+select menusel in "Beef" "Veil-Evasion" "Social Engineering Toolkit" "Backdoor Factory" "Unicorn" "Update All" "Back to Main"; do
 case $menusel in
-	"Metasploit")
-		updatemetasploit
-		pause
-		updatetools ;;
 	"Beef")
 		updateBeef
 		pause
@@ -784,7 +763,6 @@ case $menusel in
 		pause
 		updatetools ;;
 "Update All")
-		updatemetasploit
 		updateBeef
 		updateVeil
 		updateSET
