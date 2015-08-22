@@ -1467,14 +1467,9 @@ case $menusel in
 	"Install Hacking Tools")
 		hackingtools 
 		clear ;;
+
 	"Update tools to latest version")
 		updatetools
-		clear ;;
-
-	"Must View")
-		iceweasel https://www.facebook.com/haking.cracking.tutorial
-		iceweasel https://www.youtube.com/c/penetrationtestingwithkalilinux
-		pause
 		clear ;;
 	
 	"EXIT PROGRAM")
