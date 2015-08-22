@@ -75,7 +75,7 @@ case $menusel in
 		cp /opt/apt-fast/apt-fast /usr/bin
 		cp /opt/apt-fast/apt-fast.conf /etc
 		pause
-		clear ;;	
+		mainmenu ;;	
 
 	"Back to Main")
 		clear
