@@ -1445,7 +1445,6 @@ case $menusel in
 	"Install Hacking Tools")
 		hackingtools 
 		clear ;;
-<<<<<<< HEAD
 
 	"Update tools to latest version")
 		updatetools
